@@ -1,18 +1,45 @@
 .sendForm {
+  margin: 0 auto;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  /* Убираем space-between */
+  width: 100%;
+  max-width: 1140px; /* 976 + 120 + 20 + padding */
+  padding: 0 20px; /* Отступы по бокам */
+
 
 }
 
 .textarea {
-
+  flex: 1; /* Занимает всё доступное пространство */
+  min-height: 40px;
+  resize: none;
+  background-color: #F5F7FB;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 12px 10px 11px 24px;
+  overflow-y:hidden 
 }
 
-.button {
+
+.button { 
+  width: 120px;
+  height: 40px;
+  flex-shrink: 0; /* Не даём сжиматься кнопке */
+  /* остальные стили без изменений */
+	padding: 10px 20px;
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
 
 }
 
 .button:hover {
-
+	background-color: #0055aa;
 }
 .button:active {
-
+  background-color: #004488;
 }
