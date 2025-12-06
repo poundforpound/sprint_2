@@ -1,11 +1,47 @@
 .spanBlock {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	cursor: pointer;
+	justify-content: flex-start;
 }
 
 .span {
+	color: #0080ff; /* синий текст */
+	font-size: 16px;
+	padding: 2px 5px;
+	background: transparent; /* прозрачный фон */
+	border: none; /* без рамки */
+	transition: all 0.3s ease;
+}
+
+.span:hover {
+	background-color: rgba(0, 128, 255, 0.1); /* легкий синий при наведении */
+	border-radius: 3px;
 }
 
 .input {
+	border: none; /* без рамки */
+	background: transparent; /* прозрачный фон */
+	padding: 5px 8px;
+	font-size: 16px;
+	outline: none;
+	min-width: 200px;
+	color: #000000; /* черный текст при вводе */
+}
+
+.input:focus {
+	background-color: rgba(0, 0, 0, 0.05); /* легкий фон при фокусе */
 }
 
 .pen {
+	width: 16px;
+	height: 16px;
+	opacity: 0.6;
+	transition: opacity 0.3s ease;
+	cursor: pointer;
+}
+
+.pen:hover {
+	opacity: 1;
 }

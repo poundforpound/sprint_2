@@ -1,3 +1,18 @@
 .loader {
-    /*свг и/или анимация*/
-}
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: conic-gradient(from 0deg, #512DE4, #B19CD9 100%);
+    mask: radial-gradient(circle, transparent 37px, black 37px, black 45px, transparent 45px);
+    animation: spin 1s linear infinite;
+    /* Добавить сглаживание */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    will-change: transform;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

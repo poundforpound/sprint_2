@@ -1,15 +1,91 @@
 .radio {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
 }
 
-.radio::before {
+.radio + .span {
+  position: relative;
+  padding-left: 32px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #2d3748;
+  transition: all 0.3s ease;
+  display: inline-block;
+  line-height: 24px;
 }
 
+.radio + .span::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #cbd5e0;
+  border-radius: 50%;
+  background: #ffffff;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
-.radio:checked::before {
+.radio:checked + .span::before {
+  border-color: #4299e1;
+  background-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
+}
+
+.radio:checked + .span::after {
+  content: '';
+  position: absolute;
+  left: 7px;   /* (20px - 6px) / 2 = 7px */
+  top: 7px;    /* (20px - 6px) / 2 = 7px */
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ffffff;
+}
+
+.radio:focus + .span::before {
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.3);
+}
+
+.radio:hover + .span::before {
+  border-color: #a0aec0;
+  transform: scale(1.05);
+}
+
+.radio:disabled + .span {
+  color: #a0aec0;
+  cursor: not-allowed;
+}
+
+.radio:disabled + .span::before {
+  background-color: #edf2f7;
+  border-color: #e2e8f0;
+  box-shadow: none;
 }
 
 .label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.label:hover {
+  transform: translateX(4px);
 }
 
 .options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  background: #f7fafc;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
 }
+

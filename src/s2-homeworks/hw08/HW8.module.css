@@ -1,23 +1,78 @@
-.item {
-}
-
-.item:last-of-type {
-}
-
-.users {
+.container {
+  max-width: 600px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .buttonsContainer {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  justify-content: end;
 }
 
-.container {
+.buttonsContainer button {
+  padding: 10px 16px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.buttonsContainer button:hover {
+  background: #e9ecef;
+  border-color: #adb5bd;
+}
+
+.buttonsContainer button:active {
+  background: #dee2e6;
+}
+
+.users {
+  width: 600px;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .thead {
+  background: #f8f9fa;
+}
+
+.thead td {
+  padding: 16px 20px;
+  font-weight: 600;
+  color: #495057;
+  border-bottom: 2px solid #dee2e6;
+	background: #f8f9fa;
 }
 
 .nameCol {
+
+
 }
 
 .ageCol {
+text-align: center;
+}
+
+.users tbody tr {
+  border-bottom: 1px solid #e9ecef;
+  transition: background-color 0.15s ease;
+}
+
+.users tbody tr:hover {
+  background: #f8f9fa;
+}
+
+.users tbody tr:last-child {
+  border-bottom: none;
+}
+
+.users tbody td {
+  padding: 16px 20px;
 }
